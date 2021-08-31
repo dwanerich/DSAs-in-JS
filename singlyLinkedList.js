@@ -138,16 +138,19 @@ class singlyLinkedList {
         }
         console.log(arr)
     }
+
+    //     BASIC METHOD TO TRAVERSE THE LIST
+    traverse() {
+        let current = this.head;
+        while(current) {
+            console.log(current.val);
+            current = current.next;
+        }
+    }
 }
 
-//     BASIC METHOD TO TRAVERSE THE LIST
-//     traverse() {
-//         let current = this.head;
-//         while(current) {
-//             console.log(current.val);
-//             current = current.next;
-//         }
-//     }
+
+// *** SINGLY LINKED LISTS EXCEL IN INSERTION & DELETION OVER ARRAYS ***
 
 let list = new singlyLinkedList()
 list.push("ALIFE")
