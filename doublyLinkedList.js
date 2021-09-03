@@ -30,17 +30,19 @@ class doublyLinkedList {
     pop() {
         if (this.length === 0) return "nothing to pop";
         if (this.length === 1) {
-            let newHead = null, newTail = null;
-            this.head = newHead;
-            this.tail = newTail;
+            this.head = null; this.tail = null;
             this.length--;
-            return "you popped the last one";
+            return "you popped the last node";
         }
         let newTail = this.tail.prev;
         this.tail = null;
         this.tail = newTail;
-        this.length--;
-        return `${this.tail.val} is your new tail`;
+        newTail.next = null;
+        this.length--; return `${this.tail.val} is your new tail`;
+    }
+
+    shift() {
+
     }
 }
 
@@ -48,3 +50,4 @@ let list = new doublyLinkedList
 list.push(3);
 list.push(6);
 list.push(9);
+list.push(12);
