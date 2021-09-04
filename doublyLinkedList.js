@@ -42,7 +42,17 @@ class doublyLinkedList {
     }
 
     shift() {
-
+        if (this.length === 0) return "nothing to shift";
+        if (this.length === 1) {
+            this.head = null; this.tail = null;
+            this.length--;
+            return "last node alert";
+        }
+        let newHead = this.head.next;
+        newHead.prev = null;
+        this.head = newHead;
+        this.length--;
+        return this;
     }
 }
 
