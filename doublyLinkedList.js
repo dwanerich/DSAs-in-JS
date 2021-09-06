@@ -46,7 +46,7 @@ class doublyLinkedList {
         if (this.length === 1) {
             this.head = null; this.tail = null;
             this.length--;
-            return "last node alert";
+            return "last node has been removed";
         }
         let newHead = this.head.next;
         newHead.prev = null;
@@ -54,10 +54,52 @@ class doublyLinkedList {
         this.length--;
         return this;
     }
+
+    unshift(val) {
+        let newHead = new Node(val);
+
+        if (this.length === 0) {
+            this.head = newHead; this.tail = newHead;
+            this.length++;
+            return this;
+        }
+        this.head.prev = newHead;
+        newHead.next = this.head;
+        this.head = newHead;
+        this.length++;
+        return this;
+    }
+
+    get(index) {
+        if (index < 0 || index >= this.length) return "out of bounce";
+        if (index <= this.length / 2) {
+            let count = 0
+            let current = this.head;
+            while (count != index) {
+                current = current.next;
+                count++;
+            }
+        } else {
+            let count = this.length - 1;
+            let current = this.tail;
+            while (count !== index) {
+                current = current.prev;
+                count--;
+            }
+        }
+        return current;
+    }
+
+    set(index, position) {
+
+    }
 }
 
+
+
 let list = new doublyLinkedList
-list.push(3);
-list.push(6);
-list.push(9);
-list.push(12);
+list.push("Maxwell");
+list.push("Celly");
+list.push("Robbie");
+list.push("Ye");
+list.push("Dwane")
