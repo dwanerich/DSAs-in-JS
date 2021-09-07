@@ -71,17 +71,18 @@ class doublyLinkedList {
     }
 
     get(index) {
+        let current, count;
         if (index < 0 || index >= this.length) return "out of bounce";
         if (index <= this.length / 2) {
-            let count = 0
-            let current = this.head;
+            count = 0
+            current = this.head;
             while (count != index) {
                 current = current.next;
                 count++;
             }
         } else {
-            let count = this.length - 1;
-            let current = this.tail;
+            count = this.length - 1;
+            current = this.tail;
             while (count !== index) {
                 current = current.prev;
                 count--;
@@ -90,12 +91,15 @@ class doublyLinkedList {
         return current;
     }
 
-    set(index, position) {
-
+    set(index, val) {
+        let foundNode = this.get(index);
+        if (foundNode !== null) {
+            foundNode.val = val;
+            return true;
+        }
+        return "out of bounce, can't be done";
     }
 }
-
-
 
 let list = new doublyLinkedList
 list.push("Maxwell");
