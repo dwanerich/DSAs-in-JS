@@ -93,11 +93,25 @@ class doublyLinkedList {
 
     set(index, val) {
         let foundNode = this.get(index);
-        if (foundNode !== null) {
+        if (foundNode != null) {
             foundNode.val = val;
             return true;
         }
-        return "out of bounce, can't be done";
+        return false;
+    }
+
+    insert(index, val) {
+        if (index < 0 || index > this.length) return "out of bounce";
+        if (index === 0) return this.unshift(val);
+        if (index = this.length) return this.push(val)
+        let newNode = new Node(val)
+        let prevNode = this.get(index - 1)
+        let nextNode = prevNode.next;
+        prevNode.next = newNode;
+        newNode.next = nextNode;
+        nextNode.prev = newNode;
+        this.length++;
+        return true;
     }
 }
 
