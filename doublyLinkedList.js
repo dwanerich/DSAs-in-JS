@@ -104,14 +104,29 @@ class doublyLinkedList {
         if (index < 0 || index > this.length) return "out of bounce";
         if (index === 0) return this.unshift(val);
         if (index = this.length) return this.push(val)
+
         let newNode = new Node(val)
         let prevNode = this.get(index - 1)
         let nextNode = prevNode.next;
-        prevNode.next = newNode;
-        newNode.next = nextNode;
-        nextNode.prev = newNode;
+
+        prevNode.next = newNode; newNode.prev = prevNode;
+        newNode.next = nextNode; nextNode.prev = newNode;
         this.length++;
         return true;
+    }
+
+    remove(index) {
+        if (index < 0 || index >= length) return "out of bounce"
+        if (index === 0) return this.shift();
+        if (index === this.length - 1) return this.pop();
+        let removedNode = this.get(index);
+        let prevNode = removedNode.prev, nextNode = removedNode.next;
+        removedNode = null;
+        nextNode.prev = prevNode; prevNode.next = nextNode;
+        this.length--;
+        console.log(this.get(index).prev)
+        return this;
+
     }
 }
 
