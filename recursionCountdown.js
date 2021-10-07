@@ -1,38 +1,38 @@
-// let countDown = (n) => {
-//     if (n === 0) {
-//         console.log("you did it king")
-//         return;
-//     }
+let countDown = (n) => {
+    if (n === 0) {
+        console.log("you did it king")
+        return;
+    }
 
-//     console.log(n)
-//     countDown(n - 1)
+    console.log(n)
+    countDown(n - 1)
+}
+
+countDown(5)
+
+// let pray = () => {
+//     console.log("prayers first thing")
 // }
 
-// countDown(5)
+// let takeShower = () => {
+//     console.log('peppermint lather hot shower')
+// }
 
-let pray = () => {
-    console.log("prayers first thing")
-}
+// let cookFood = () => {
+//     let items = ['toast', 'tea', 'fruit', 'smoothie']
+//     return items[Math.floor(Math.random() * items.length)]
+// }
 
-let takeShower = () => {
-    console.log('peppermint lather hot shower')
-}
+// let eatBreakfast = () => {
+//     let meal = cookFood();
+//     console.log("having " + `${meal}` + " this morning")
+// }
 
-let cookFood = () => {
-    let items = ['toast', 'tea', 'fruit', 'smoothie']
-    return items[Math.floor(Math.random() * items.length)]
-}
+// let wakeUp = () => {
+//     pray()
+//     takeShower()
+//     eatBreakfast()
+//     console.log('out the door now, xo')
+// }
 
-let eatBreakfast = () => {
-    let meal = cookFood();
-    console.log("having " + `${meal}` + " this morning")
-}
-
-let wakeUp = () => {
-    pray()
-    takeShower()
-    eatBreakfast()
-    console.log('out the door now, xo')
-}
-
-wakeUp()
+// wakeUp()
