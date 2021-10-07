@@ -126,7 +126,6 @@ class doublyLinkedList {
         this.length--;
         console.log(this.get(index).prev)
         return this;
-
     }
 }
 
