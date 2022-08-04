@@ -23,8 +23,9 @@ class Stack {
             this.first.next = temp;
 
         }
-        //         return this.first.val;
-        return ++this.size;
+        // return this.first.val;
+        // return ++this.size;
+        console.log(++ this.size)
     }
 
     pop() {
@@ -34,7 +35,8 @@ class Stack {
             this.first === null;
         }
         this.first = this.first.next;
-        return temp.val
+        // return temp.val
+        console.log(temp.val)
     }
 
 }
@@ -46,4 +48,5 @@ bigStack.push('junior mafia')
 bigStack.push('the commission')
 
 
+bigStack.pop()
 bigStack.pop()

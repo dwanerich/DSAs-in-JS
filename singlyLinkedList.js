@@ -157,6 +157,7 @@ list.push("ALIFE")
 list.push("BBC")
 list.push("CARHARTT")
 list.push("DKNY")
+console.log(list.get(3))
 
 // list.push("GOODBYE")// let first = new Node("Hi")
 // first.next = new Node('There')
