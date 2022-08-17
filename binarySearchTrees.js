@@ -18,6 +18,7 @@ class BST {
     } else {
       let current = this.root;
       while(true) {
+        if (val === current.val) return 'duplicate'
         if (val < current.val) {
           if (current.left === null) {
             current.left = newNode
@@ -35,6 +36,21 @@ class BST {
         }
       }
     }
+  }
+  contains(val) {
+    if(this.root === null) return false;
+    let current = this.root;
+      found = false;
+    while(!found && current) {
+      if(val < current.val) {
+        current = current.left
+      } else if (val > current.val) {
+        current = current.right
+      } else {
+        return true;
+      }
+    }
+    return false;
   }
 }
 
