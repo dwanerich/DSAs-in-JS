@@ -1,27 +1,22 @@
 
 let validAnagram = (str1, str2) => {
-    
+
     if (str1.length !== str2.length) {
         return false;
     }
 
      const results = {};
-    
-    for (let i = 0; i < str1.length; i++){
-        let letter = str1[i];
+
+    for (let val of str1){
+        let letter = str1[val];
         results[letter] ? results[letter] += 1 : results[letter] = 1;
         }
 
-    for (let i = 0; i < str2.length; i++) {
-        let letter = str2[i];
-        if (!results[letter]) {
-            return false
-        }
-        else {
-            results[letter] -= 1;
-        }
+    for (let val of str2) {
+        let letter = str2[val];
+        (!results[letter]) ? false : results[letter] -= 1;
     }
          return true
     }
 
-validAnagram('jimmy', 'chris')
+console.log(validAnagram('hello world', 'Worldhello '))

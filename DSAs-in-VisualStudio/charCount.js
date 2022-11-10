@@ -1,17 +1,21 @@
-let charCount = (str) => {
+// let charCount = (string) => {
 
-    results = {}
+//     results = {}
 
-    for (char of str) {
-        if (/[a-z0-9]/.test(char)) {
-            (results[char] > 0) ? results[char]++ :
-            results[char] = 1
-        }
-    }
-    console.log(results)
-}
+//     for (let i = 0; i < string.length; i++)
+//     {
+//         let char = string[i]
+//             if (results[char] > 0) {
+//             results[char]++;
+//         }
+//             else {
+//             results[char] = 1
+//         };
+//     }
+//     return (results)
+// }
 
-charCount('yessenia perez')
+// charCount('yessenia perez')
 
 // REFACTOR
 
@@ -31,3 +35,5 @@ charCount('yessenia perez')
 //     }
 //     return results;
 // }
+
+
