@@ -4,7 +4,6 @@ class Node {
         this.next = null;
     }
 }
-
 class Stack {
     constructor() {
         this.first = null;
@@ -38,7 +37,6 @@ class Stack {
         // return temp.val
         console.log(temp.val)
     }
-
 }
 
 let bigStack = new Stack()
@@ -46,7 +44,6 @@ bigStack.push('lil cease')
 bigStack.push('lil kim')
 bigStack.push('junior mafia')
 bigStack.push('the commission')
-
 
 bigStack.pop()
 bigStack.pop()
