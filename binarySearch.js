@@ -1,3 +1,4 @@
+// worse time O(log n) | best time O(1) only works on sorted arrays
 let binarySearch = (arr, val) => {
     let min = 0;
     let max = arr.length - 1;
@@ -21,4 +22,4 @@ let binarySearch = (arr, val) => {
 // array must be sorted
 let ray = [1,2,3,60,100,400,600,3000,150000]
 
-binarySearch(ray, 400)
+console.log(binarySearch(ray, 80))

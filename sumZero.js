@@ -1,3 +1,4 @@
+// time o(N) | space O(1)
 let ternarySumZero = (arr) => {
     let l = 0; r = arr.length - 1;
     while(l < r){
@@ -8,5 +9,4 @@ let ternarySumZero = (arr) => {
 }
 
 sample = [-4,-2,2,3]
-
 console.log(ternarySumZero(sample))

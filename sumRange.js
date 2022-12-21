@@ -1,6 +1,6 @@
 let sumRange = (num) => {
-    if (num === 1) return 1;
+    if (num === 1) return num;
     return num + sumRange(num-1)
 }
 
-sumRange(5)
+console.log(sumRange(4))

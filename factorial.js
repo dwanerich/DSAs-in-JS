@@ -8,11 +8,11 @@ let factorial = (num) => {
     return total
 }
 
-factorial(2)
+factorial(5)
 
 let iterativeFactor = (num) => {
-    if (num === 1) return 1;
+    if (num === 1) return num;
     return num * iterativeFactor(num - 1)
 }
 
-// iterativeFactor(4)
+console.log(iterativeFactor(5))
